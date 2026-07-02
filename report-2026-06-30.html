@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM Benchmark Tracker - 2026-06-30 10:33</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212b; --line:#2a2f3a;
+    --txt:#e7ebf2; --mut:#9aa4b2; --cloud:#5aa9ff; --open:#46d6a3;
+    --warn:#ffb454; --bad:#ff6b6b; --chip:#252b36;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px}
+  h1{font-size:24px;margin:0 0 4px}
+  h2{font-size:18px;margin:30px 0 12px;display:flex;align-items:center;gap:9px}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .sub{color:var(--mut);font-size:13px;margin:0}
+  table{width:100%;border-collapse:collapse;background:var(--panel);
+        border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+  th{background:var(--panel2);color:var(--mut);font-weight:600;font-size:12px;
+     text-transform:uppercase;letter-spacing:.03em}
+  tr:last-child td{border-bottom:none}
+  .name{font-weight:600}
+  .vendor{color:var(--mut);font-size:13px}
+  .pos{color:var(--mut);width:26px;text-align:center}
+  .pin{color:var(--warn);font-size:11px;margin-left:5px}
+  .bar{height:8px;border-radius:5px;background:var(--chip);min-width:90px;position:relative}
+  .bar>span{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+  .bar small{position:absolute;right:6px;top:-7px;font-size:11px;color:var(--mut)}
+  .chips{display:flex;gap:4px;flex-wrap:wrap}
+  .chip{background:var(--chip);border:1px solid var(--line);border-radius:5px;
+        padding:1px 6px;font-size:11px;color:var(--mut)}
+  .chip b{color:var(--txt)}
+  .chip.off{opacity:.4}
+  .os td{font-size:13px}
+  .os .plat{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.03em}
+  .flag{color:var(--warn);font-size:12px}
+  .changes{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .card h3{margin:0 0 8px;font-size:14px}
+  .pill{display:inline-block;border-radius:20px;padding:2px 9px;font-size:12px;margin:2px 4px 2px 0}
+  .up{background:rgba(70,214,163,.15);color:var(--open)}
+  .down{background:rgba(255,107,107,.15);color:var(--bad)}
+  .move{background:rgba(90,169,255,.15);color:var(--cloud)}
+  .muted{color:var(--mut)}
+  footer{margin-top:34px;color:var(--mut);font-size:12.5px;border-top:1px solid var(--line);padding-top:16px}
+  .src{display:inline-block;margin-right:14px}
+  .ok{color:var(--open)} .err{color:var(--bad)} .skip{color:var(--mut)}
+  code{background:var(--panel2);padding:1px 5px;border-radius:4px;font-size:12.5px}
+  a{color:var(--cloud)}
+  @media(max-width:680px){.changes{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LLM Benchmark Tracker</h1>
+  <p class="sub">Generated 2026-06-30 10:33 &middot; leaderboard data 2026-06-29 &middot; top 4 per group</p>
+
+  
+
+  <h2><span class="dot" style="background:var(--cloud)"></span>Top 4 Cloud (proprietary)</h2>
+  
+  <table>
+    <thead><tr>
+      <th class="pos">#</th><th>Model</th><th>Strength</th>
+      
+      <th>Elo</th><th>Boards (rank)</th>
+    </tr></thead>
+    <tbody>
+    
+      <tr>
+        <td class="pos">1</td>
+        <td><span class="name">Claude Fable 5</span>
+            <div class="vendor">Anthropic</div></td>
+        <td><div class="bar"><span style="width:100%;background:var(--cloud)"></span>
+            <small>100</small></div></td>
+        
+        <td>1654</td>
+        <td><div class="chips">
+          
+            <span class="chip " title="text">T <b>#1</b></span>
+          
+            <span class="chip " title="code">C <b>#1</b></span>
+          
+            <span class="chip " title="agent">A <b>#1</b></span>
+          
+        </div></td>
+      </tr>
+    
+      <tr>
+        <td class="pos">2</td>
+        <td><span class="name">GPT 5.5</span>
+            <div class="vendor">OpenAI</div></td>
+        <td><div class="bar"><span style="width:55%;background:var(--cloud)"></span>
+            <small>55</small></div></td>
+        
+        <td>1502</td>
+        <td><div class="chips">
+          
+            <span class="chip " title="text">T <b>#10</b></span>
+          
+            <span class="chip " title="code">C <b>#16</b></span>
+          
+            <span class="chip " title="agent">A <b>#3</b></span>
+          
+        </div></td>
+      </tr>
+    
+      <tr>
+        <td class="pos">3</td>
+        <td><span class="name">Gemini 3.5 Flash</span>
+            <div class="vendor">Google</div></td>
+        <td><div class="bar"><span style="width:40%;background:var(--cloud)"></span>
+            <small>40</small></div></td>
+        
+        <td>1506</td>
+        <td><div class="chips">
+          
+            <span class="chip " title="text">T <b>#13</b></span>
+          
+            <span class="chip " title="code">C <b>#14</b></span>
+          
+            <span class="chip " title="agent">A <b>#14</b></span>
+          
+        </div></td>
+      </tr>
+    
+      <tr>
+        <td class="pos">4</td>
+        <td><span class="name">muse-spark</span>
+            <div class="vendor">Meta</div></td>
+        <td><div class="bar"><span style="width:25%;background:var(--cloud)"></span>
+            <small>25</small></div></td>
+        
+        <td>1487</td>
+        <td><div class="chips">
+          
+            <span class="chip " title="text">T <b>#6</b></span>
+          
+            <span class="chip off" title="code">C &mdash;</span>
+          
+            <span class="chip off" title="agent">A &mdash;</span>
+          
+        </div></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  
+
+  <h2><span class="dot" style="background:var(--open)"></span>Top 4 Open-weight</h2>
+  
+  <table>
+    <thead><tr>
+      <th class="pos">#</th><th>Model</th><th>Strength</th>
+      
+      <th>Elo</th><th>Boards (rank)</th>
+    </tr></thead>
+    <tbody>
+    
+      <tr>
+        <td class="pos">1</td>
+        <td><span class="name">GLM 5.2</span>
+            <div class="vendor">Z.ai</div></td>
+        <td><div class="bar"><span style="width:54%;background:var(--open)"></span>
+            <small>54</small></div></td>
+        
+        <td>1593</td>
+        <td><div class="chips">
+          
+            <span class="chip off" title="text">T &mdash;</span>
+          
+            <span class="chip " title="code">C <b>#2</b></span>
+          
+            <span class="chip " title="agent">A <b>#10</b></span>
+          
+        </div></td>
+      </tr>
+    
+      <tr>
+        <td class="pos">2</td>
+        <td><span class="name">Kimi K2.6</span>
+            <div class="vendor">Moonshot</div></td>
+        <td><div class="bar"><span style="width:26%;background:var(--open)"></span>
+            <small>26</small></div></td>
+        
+        <td>1513</td>
+        <td><div class="chips">
+          
+            <span class="chip off" title="text">T &mdash;</span>
+          
+            <span class="chip " title="code">C <b>#13</b></span>
+          
+            <span class="chip " title="agent">A <b>#17</b></span>
+          
+        </div></td>
+      </tr>
+    
+      <tr>
+        <td class="pos">3</td>
+        <td><span class="name">DeepSeek V4 Pro</span>
+            <div class="vendor">DeepSeek</div></td>
+        <td><div class="bar"><span style="width:15%;background:var(--open)"></span>
+            <small>15</small></div></td>
+        
+        <td>&mdash;</td>
+        <td><div class="chips">
+          
+            <span class="chip off" title="text">T &mdash;</span>
+          
+            <span class="chip off" title="code">C &mdash;</span>
+          
+            <span class="chip " title="agent">A <b>#16</b></span>
+          
+        </div></td>
+      </tr>
+    
+      <tr>
+        <td class="pos">4</td>
+        <td><span class="name">Nemotron 3 Ultra</span>
+            <div class="vendor">Nvidia</div></td>
+        <td><div class="bar"><span style="width:5%;background:var(--open)"></span>
+            <small>5</small></div></td>
+        
+        <td>&mdash;</td>
+        <td><div class="chips">
+          
+            <span class="chip off" title="text">T &mdash;</span>
+          
+            <span class="chip off" title="code">C &mdash;</span>
+          
+            <span class="chip " title="agent">A <b>#24</b></span>
+          
+        </div></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  
+
+  <h2><span class="dot" style="background:var(--open)"></span>Windows vs Mac - how to run the open models locally</h2>
+  <table class="os">
+    <thead><tr><th>Model</th><th>Windows</th><th>Mac (Apple Silicon)</th><th>RAM / notes</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td><span class="name">GLM 5.2</span>
+            <div class="vendor">GLM (Z.ai / Zhipu)</div>
+            </td>
+        <td><span class="plat">Win</span><br>GGUF Q4_K_M via Ollama / LM Studio (CPU+GPU offload). NVIDIA heavy path: safetensors + vLLM.</td>
+        <td><span class="plat">Mac</span><br>mlx-community GLM 4-bit via LM Studio / mlx-lm. GGUF-Metal fallback. ("glm-mlx" = this MLX build.)</td>
+        <td>Air/mid sizes run in ~24-48 GB at Q4; full MoE needs workstation RAM (128 GB+).<div class="muted" style="margin-top:5px">There is no "DSA" format - on Windows the real choices are GGUF (CPU/GPU) or safetensors (GPU).</div></td>
+      </tr>
+    
+      <tr>
+        <td><span class="name">Kimi K2.6</span>
+            <div class="vendor">Kimi (Moonshot)</div>
+            </td>
+        <td><span class="plat">Win</span><br>GGUF Q4 via llama.cpp with GPU offload; very large MoE benefits from multi-GPU vLLM.</td>
+        <td><span class="plat">Mac</span><br>MLX 4-bit on high-RAM Apple Silicon only.</td>
+        <td>Large MoE - workstation/Studio class memory.</td>
+      </tr>
+    
+      <tr>
+        <td><span class="name">DeepSeek V4 Pro</span>
+            <div class="vendor">DeepSeek</div>
+            </td>
+        <td><span class="plat">Win</span><br>GGUF Q4 with GPU offload (llama.cpp), or multi-GPU vLLM on the safetensors weights.</td>
+        <td><span class="plat">Mac</span><br>MLX 4-bit, but the full models need a high-RAM Mac (Studio Ultra / 128-192 GB).</td>
+        <td>Large MoE. Consumer laptops realistically only run the smaller distilled variants.</td>
+      </tr>
+    
+      <tr>
+        <td><span class="name">Nemotron 3 Ultra</span>
+            <div class="vendor">Nemotron (Nvidia)</div>
+            </td>
+        <td><span class="plat">Win</span><br>safetensors + vLLM/TensorRT-LLM on NVIDIA GPUs is the first-class path; GGUF where published.</td>
+        <td><span class="plat">Mac</span><br>GGUF on Metal; MLX builds less common.</td>
+        <td>GPU-oriented; large variants need 48 GB+ VRAM or offload.</td>
+      </tr>
+    
+    </tbody>
+  </table>
+  <p class="sub" style="margin-top:8px"><b>Format key:</b> Windows default = <code>GGUF</code> (Q4_K_M) via Ollama / LM Studio; NVIDIA max-speed = <code>safetensors</code> + vLLM. Mac (Apple Silicon) = <code>MLX</code> 4-bit (Intel Macs: GGUF only). There is no "DSA" format.</p>
+
+  <h2>Changes since last run</h2>
+  <div class="changes">
+    
+    <div class="card">
+      <h3 style="color:var(--cloud)">Cloud</h3>
+      
+      <span class="muted">First run - nothing to compare against yet.</span>
+      
+    </div>
+    
+    <div class="card">
+      <h3 style="color:var(--open)">Open-weight</h3>
+      
+      <span class="muted">First run - nothing to compare against yet.</span>
+      
+    </div>
+    
+  </div>
+
+  <footer>
+    <p><b>Method:</b> models ranked by mean position across LMArena boards
+       (text, code, agent); a missing board counts as last place. Cloud vs
+       open split on each model's published license.
+       Add a free Artificial Analysis key in <code>config.yaml</code> for Intelligence Index / price / speed columns.
+       Grouping: one model per vendor.</p>
+    <p><b>Sources:</b>
+      
+        <span class="src">lmarena:
+          <span class="ok">ok</span>
+          <span class="muted">offline fixtures</span></span>
+      
+        <span class="src">artificial_analysis:
+          <span class="ok">ok</span>
+          <span class="muted">skipped: no offline fixture</span></span>
+      
+    </p>
+    <p class="muted">A personal weekly snapshot of public leaderboard data - not an official benchmark.</p>
+  </footer>
+</div>
+</body>
+</html>
